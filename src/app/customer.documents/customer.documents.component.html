@@ -1,0 +1,52 @@
+<div class="container">
+    <h2 class="customer-table-header">Documentos de Rolandinho Gaúcho</h2>
+
+
+    <h1>Adicionar novo documento Pessoal</h1>
+
+    <form>
+        <label for="cpf">Tipo:</label>
+        <select [(ngModel)]="documentType">
+            <option *ngFor="let docType of documentType" value="docType">{{docType}}</option>
+        </select>
+
+        <label for="description">Descrição:</label>
+        <input type="text" id="description" name="description">
+
+        <label for="file">Carregar:</label>
+        <input type="file" id="file" name="file">
+
+        <button type="submit" >Cadastrar</button>
+    </form>
+</div>
+
+<div class="customer-table-container">
+    <h1>Documentos Pessoais Ronaldinho</h1>
+
+    <table class="customer-table">
+        <tr>
+            <th class="customer-table-cell column-center">Selecionar</th>
+            <th class="customer-table-cell column-left">Documento</th>
+            <th class="customer-table-cell column-left">Data</th>
+            <th class="customer-table-cell column-center">Tipo</th>
+
+        </tr>
+        <tr class="customer-table-row">
+            <td class="column-center"><input type="checkbox"></td>
+            <td class="customer-table-cell column-left">Identidade RG</td>
+            <td class="customer-table-cell column-left">05/10/2022</td>
+            <td class="customer-table-cell column-center"><img style="padding-left: 40%;" src="/assets/imgs/word.png" />
+            </td>
+        </tr>
+
+        <tr class="customer-table-row">
+            <td class="customer-table-cell column-center"><input type="checkbox"></td>
+            <td class="customer-table-cell column-left">Passaporte</td>
+            <td class="customer-table-cell column-left">11/09/2021</td>
+            <td class="customer-table-cell column-center"><img style="padding-left: 40%;" src="/assets/imgs/word.png" />
+            </td>
+        </tr>
+
+
+    </table>
+</div>

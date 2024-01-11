@@ -1,0 +1,26 @@
+.column-center {
+    align-items: center;
+}
+
+.column-center {
+    display: block;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,51 @@
+<div class="container">
+    <h1>Novo cliente</h1>
+
+    <form>
+        <label for="cpf">Cpf:</label>
+        <input type="text" id="cpf" name="cpf" [(ngModel)]="customer.cpf" required>
+
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="customer.name" required>
+
+        <label for="email1">Email 1:</label>
+        <input type="email" id="email1" name="email1" [(ngModel)]="customer.email1" required>
+
+        <label for="email2">Email 2:</label>
+        <input type="email" id="email2" name="email2" [(ngModel)]="customer.email2">
+
+        <label for="phone1">Telefone 1:</label>
+        <input type="text" id="phone1" name="phone1" [(ngModel)]="customer.phone1" required>
+
+        <label for="phone2">Telefone 2:</label>
+        <input type="text" id="phone2" name="phone2" [(ngModel)]="customer.phone2" required>
+
+        <button type="submit" (click)="register()">Cadastrar</button>
+    </form>
+
+  
+</div>
+
+<div class="customer-table-container">
+    <h2 class="customer-table-header">Clientes</h2>
+
+    <table class="customer-table">
+        <tr>
+            <th class="customer-table-cell column-center">Selecionar</th>
+            <th class="customer-table-cell column-left">Nome</th>
+            <th class="customer-table-cell column-left">E-mail</th>
+            <th class="customer-table-cell column-left">Telefone</th>
+            <th class="customer-table-cell column-left">Documentos</th>
+        </tr>
+        <tr class="customer-table-row" *ngFor="let customer of customers">
+            <td class="column-center"><input type="checkbox"></td>
+            <td class="customer-table-cell">{{customer.name}}</td>
+            <td class="customer-table-cell">{{customer.email1}}</td>
+            <td class="customer-table-cell">{{customer.phone1}}</td>
+            <td class="customer-table-cell column-center" routerLink="/customerDocuments/1" style="cursor: pointer"><img
+                    src="/assets/imgs/detail.png" /></td>
+        </tr>
+
+
+    </table>
+</div>
